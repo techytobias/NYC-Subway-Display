@@ -6,9 +6,20 @@
 ## Materials
 - Raspberry Pi (Pi 3 Model B or later recommended)
 - SD Card (8GB Class 10 or better)
-- LED Matrix. I used[this Adafruit one, which is 64 x 32 with a 5mm led spacing](https://link-url-here.org)
-- Adafruit RGB Matrix driver. I used [this one with the RTC](https://link-url-here.org), but you should be able to use the regular one
--- https://www.adafruit.com/product/2277
+- LED Matrix. I used [this Adafruit one, which is 64 x 32 with a 5mm led spacing](https://www.adafruit.com/product/2277)
+- Adafruit RGB Matrix driver. I used [this one with the RTC](https://www.adafruit.com/product/2345), but you should be able to use the regular one
+- Adequate power for the display and Pi. [This adapter](https://www.adafruit.com/product/1466) should work great.
+-- It's worth noting that my display is configured with 2A to the hat and 500mA to the Pi over USB. It works, but there is some flicker.
+-Appropriate peripherals (Display, keyboard, mouse, etc) or SSH enabled by default.
+
 ## Before You Begin This Guide
+- Install Raspbian (No desktop environment needed)
+- Enable SSH
+- Follow [this Adafruit guide](https://learn.adafruit.com/adafruit-rgb-matrix-plus-real-time-clock-hat-for-raspberry-pi/driving-matrices) to get the examples running on your display.
+-- Ensure that you are able to run example 0 (the rotating cube) before continuing.
+-- If the display works for a few seconds and then shuts off, you may not have sufficient power
+-- If there is severe aliasing or continous flickering, experiment with different values for --led-gpio-slowdown. I used --led-gpio-slowdown=0
+
+
 
 
