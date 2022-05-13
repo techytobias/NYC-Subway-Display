@@ -16,9 +16,9 @@
 - Install Raspbian (No desktop environment needed)
 - Enable SSH
 - Follow [this Adafruit guide](https://learn.adafruit.com/adafruit-rgb-matrix-plus-real-time-clock-hat-for-raspberry-pi/driving-matrices) to get the examples running on your display.
--- Ensure that you are able to run example 0 (the rotating cube) before continuing.
--- If the display works for a few seconds and then shuts off, you may not have sufficient power
--- If there is severe aliasing or continous flickering, experiment with different values for --led-gpio-slowdown. I used --led-gpio-slowdown=0
+    - Ensure that you are able to run example 0 (the rotating cube) before continuing.
+    - If the display works for a few seconds and then shuts off, you may not have sufficient power
+    - If there is severe aliasing or continous flickering, experiment with different values for --led-gpio-slowdown. I used --led-gpio-slowdown=0
 
 
 
