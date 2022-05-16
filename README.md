@@ -3,6 +3,7 @@
 #### Capabilities
 - Display times for arriving trains at any NYC subway station
 - Rotate through time displays for multiple stations
+[Image of display]
 ## Materials
 - Raspberry Pi (Pi 3 Model B or later recommended)
 - SD Card (8GB Class 10 or better)
@@ -23,6 +24,7 @@
 ## Creating the display
 - At this point, I'm assuming that you have the rotating cube demo file working. Your file structure should look like /home/pi/rpi-rgb-led-matrix/bindings/python/samples/
 - We will be keeping this file structure during this guide for the sake of simplicity.
+#### Installing Python dependencies
 
 
 
