@@ -62,7 +62,7 @@
 
 ## Customization
 - Use stops.csv to find the code for your desired station(s). Use only the first three letters.
-    - e.g, 232 for Borough Hall, or A41 for Jay-St Metrotech.
+    - e.g, 232 for Borough Hall, or A41 for Jay St-Metrotech.
     - Note that the station names for some stations in stops.csv have been shortened to fit better on the display.
     
     
