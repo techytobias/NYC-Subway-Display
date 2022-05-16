@@ -29,7 +29,7 @@
 - We will be keeping this file structure during this guide for the sake of simplicity.
 #### Transferring Files
 - Move the files rundisplay.py , mtacalls.py (be sure to add your API key) , stops.csv , and packageinst.sh to /home/pi/rpi-rgb-led-matrix/bindings/python/samples/
-    -Using FileZilla over SFTP is the reccommended way to do this.
+    - Using FileZilla over SFTP is the reccommended way to do this.
 #### Installing Python dependencies
 - In your SSH window, change directory to our main directory
     - cd /home/pi/rpi-rgb-led-matrix/bindings/python/samples/
