@@ -28,7 +28,7 @@
 - At this point, I'm assuming that you have the rotating cube demo file working. Your file structure should look like /home/pi/rpi-rgb-led-matrix/bindings/python/samples/
 - We will be keeping this file structure during this guide for the sake of simplicity.
 #### Transferring Files
-- Move the files rundisplay.py , mtacalls.py , and packageinst.sh to /home/pi/rpi-rgb-led-matrix/bindings/python/samples/
+- Move the files rundisplay.py , mtacalls.py (be sure to add your API key) , stops.csv , and packageinst.sh to /home/pi/rpi-rgb-led-matrix/bindings/python/samples/
     -Using FileZilla over SFTP is the reccommended way to do this.
 #### Installing Python dependencies
 - In your SSH window, change directory to our main directory
@@ -37,6 +37,35 @@
     - sudo chmod +x packageinst.sh
     - sudo ./packageinst.sh
 - Check your work. You should see lots of new folders in the /home/pi/rpi-rgb-led-matrix/bindings/python/ directory.
+### Running the code
+- First, make rundisplay.py executable
+    - sudo chmod +x rundisplay.py
+- Then, run the code (Modify this code as needed for your display).
+    - sudo ./rundisplay.py --led-rows=32 --led-cols=64 --led-slowdown-gpio=2 -b=30
+- You should see train times appear after a few minutes of the code running. You should see the times appear on your terminal window as they are loaded by the API as well.
+- If this works, jump to the customization section. If not, follow the troubleshooting section.
+
+## Troubleshooting
+#### Basic Troubleshooting
+- Ensure whatever file you are trying to run is executable
+    - sudo chmod +x filename.abc
+- Ensure all python packages are loaded
+- Ensure you entered your API key probably
+- Recheck whether you can run the rotating cube demo file
+
+#### More Advanced Troubleshooting
+- edit mtacalls.py using nano to add the below line:
+    - print(totalstationtimes("A41"))
+- then, run mtacalls.py
+    - sudo python3 mtacalls.py
+- you should see train times print out after a few seconds. If you don't, and you see a python error, search the error on stack exchange.
+
+## Customization
+- Use stops.csv to find the code for your desired station(s). Use only the first three letters.
+    - e.g, 232 for Borough Hall, or A41 for Jay-St Metrotech.
+    - Note that the station names for some stations in stops.csv have been shortened to fit better on the display.
+    
+    
 
 
 
