@@ -17,11 +17,12 @@
 ## Before You Begin This Guide
 - Install Raspbian (No desktop environment needed)
 - Enable SSH
-- Install PIP and Python (For retreving packages)
+- Get an MTA API key [here](https://api.mta.info).
+- Install PIP and Python on the Raspberry Pi (For retrieving packages)
 - Follow [this Adafruit guide](https://learn.adafruit.com/adafruit-rgb-matrix-plus-real-time-clock-hat-for-raspberry-pi/driving-matrices) to get the examples running on your display.
     - Ensure that you are able to run example 0 (the rotating cube) before continuing.
     - If the display works for a second and then shuts off, you may not have sufficient power.
-    - If there is severe aliasing or continous flickering, experiment with different values for --led-gpio-slowdown. I used --led-gpio-slowdown=2
+    - If there is severe aliasing or flickering, experiment with different values for --led-gpio-slowdown. I used --led-gpio-slowdown=2
 
 ## Creating the display
 - At this point, I'm assuming that you have the rotating cube demo file working. Your file structure should look like /home/pi/rpi-rgb-led-matrix/bindings/python/samples/

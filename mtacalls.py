@@ -10,7 +10,7 @@ def getdata():
     links=["https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs-ace","https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs-bdfm", "https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs"]
     for link in links:
         feed = gtfs_realtime_pb2.FeedMessage()
-        response = requests.get(link, headers={"x-api-key": 'I1y5ts3GAB6J7AtSeIHva8eJIX1zv7t43heX6hRv'})
+        response = requests.get(link, headers={"x-api-key": 'YOUR API KEY HERE. KEEP THE APOSTOPHES'})
         feed.ParseFromString(response.content)
         subway_feed = protobuf_to_dict(feed) # subway_feed is a dictionary
         realtime_data = subway_feed['entity'] # train_data is a list
