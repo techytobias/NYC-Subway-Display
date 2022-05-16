@@ -3,7 +3,11 @@
 #### Capabilities
 - Display times for arriving trains at any NYC subway station
 - Rotate through time displays for multiple stations
+<<<<<<< HEAD
 [Image of display]
+=======
+- [Image of display](https://github.com/techytobias/NYC-Subway-Display/blob/main/Display.JPG)
+>>>>>>> 0115ec983054e4bce9f90a41e94404da5dfbce42
 ## Materials
 - Raspberry Pi (Pi 3 Model B or later recommended)
 - SD Card (8GB Class 10 or better)
