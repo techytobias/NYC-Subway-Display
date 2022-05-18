@@ -1,19 +1,12 @@
-#!/usr/bin/env python
 from samplebase import SampleBase
 from rgbmatrix import graphics
 from pandas import pandas as pd
 import time
 import mtacalls2
-#import pandas as pd
 
 df=pd.read_csv("stops.csv")
 df.head()
 stops=pd.Series(df.stop_name.values,index=df.stop_id).to_dict()
-
-
-
-
-
 
 class GraphicsTest(SampleBase):
     def __init__(self, packet, *args, **kwargs):
@@ -90,39 +83,13 @@ class GraphicsTest(SampleBase):
                 time.sleep(10)
             else:
                 print("not sleeping")      
-        #time.sleep(10)
-                
-        
-        
-        
-        #graphics.DrawLine(canvas, 0, 8, 64, 8, white)
-
-#        green = graphics.Color(0, 255, 0)
-#        graphics.DrawCircle(canvas, 15, 15, 10, green)
-
-        
-        #graphics.DrawText(canvas, font, 0, 7, lexington, "Eastchester-Dyre Av")
-        #graphics.DrawText(canvas, font, 0, 16, seventh, "Flatbush Av")
-
-        
-        #time.sleep(10)  # show display for 10 seconds before exit
         
 
 # Main function
 while True:
     if __name__ == "__main__":
         packet=mtacalls.totalstationtimes(["232", "A41", "423"])
-        
-        
         graphics_test = GraphicsTest(packet)
-        #packet=cycler(mtacalls, "423")
-#        time.sleep(14)
-#        #packet=[[2, "F06S", 8],["F", "D43S", 10],["A", "A03N", 13],[4, "232N", 16]]
-        #graphics_test = GraphicsTest(packet)
-#        packet=cycler(mtacalls, "A41")
-#        time.sleep(14)
-#        #packet=[[2, "F06S", 8],["F", "D43S", 10],["A", "A03N", 13],[4, "232N", 16]]
-#        graphics_test = GraphicsTest(packet)
         if (not graphics_test.process()):
             print("isrunning")
             graphics_test.print_help()
