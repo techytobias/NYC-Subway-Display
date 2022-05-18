@@ -10,7 +10,7 @@ def getdata():
     links=["https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs-ace","https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs-bdfm", "https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs"]
     for link in links:
         feed = gtfs_realtime_pb2.FeedMessage()
-        response = requests.get(link, headers={"x-api-key": 'YOUR API KEY HERE. KEEP THE APOSTOPHES'})
+        response = requests.get(link, headers={"x-api-key": 'API KEY HERE KEEP APOSTROPHES'})
         feed.ParseFromString(response.content)
         subway_feed = protobuf_to_dict(feed) # subway_feed is a dictionary
         realtime_data = subway_feed['entity'] # train_data is a list
@@ -32,33 +32,36 @@ def station_time_lookup(train_data, station):
     for trains in train_data: # trains are dictionaries
         if trains.get('trip_update', False) != False:
             unique_train_schedule = trains['trip_update'] # train_schedule is a dictionary with trip and stop_time_update
-#            if (unique_train_schedule['trip']['route_id']) != train:
-#              continue
             try:
                 unique_arrival_times = unique_train_schedule['stop_time_update'] # arrival_times is a list of arrivals
                 for scheduled_arrivals in unique_arrival_times: #arrivals are dictionaries with time data and stop_ids
                     if scheduled_arrivals.get('stop_id', False) == station:
                         s1=unique_train_schedule
                         trainletter=s1['trip']['route_id']
-
-                        test5=unique_arrival_times[-1]
-                        stop=test5['stop_id']
-
+                        laststop=unique_arrival_times[-1]['stop_id']
                         time_data = scheduled_arrivals['arrival']
                         unique_time = time_data['time']
                         if unique_time != None:
-                            ctimes.append([trainletter, int(((unique_time - int(time.time())) / 60)), stop])
+                            mintoarrival=int(((unique_time - int(time.time())) / 60))
+                            if mintoarrival > 2:
+                                ctimes.append([trainletter, mintoarrival, laststop])
             except:
                 pass
     return ctimes
 
-def totalstationtimes(station):
-    stations=[(station + "N"), (station + "S")]
+def totalstationtimes(stationlist):
+    finaldata=[]
     data=getdata()
-    newdata=[]
-    for station1 in stations:
-        arrd=gettimes(data,station1)
-        for element in arrd:
-            newdata.append(element)
-    newdata.sort(key=lambda row: (row[1], row[0]), reverse=False)
-    return newdata
+    print("datagot")
+    for station in stationlist:
+        stations=[(station + "N"), (station + "S")]
+        newdata=[]
+        for station1 in stations:
+            arrd=gettimes(data,station1)
+            for element in arrd:
+                newdata.append(element)
+        newdata.sort(key=lambda row: (row[1], row[0]), reverse=False)
+        finaldata.append(newdata)
+    return finaldata
+
+print(totalstationtimes(["F06", "D43"]))
