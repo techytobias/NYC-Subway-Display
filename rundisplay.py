@@ -3,7 +3,7 @@ from samplebase import SampleBase
 from rgbmatrix import graphics
 from pandas import pandas as pd
 import time
-import mtacalls
+import mtacalls2
 #import pandas as pd
 
 df=pd.read_csv("stops.csv")
@@ -12,16 +12,6 @@ stops=pd.Series(df.stop_name.values,index=df.stop_id).to_dict()
 
 
 
-def cycler(mtacalls, station):
-    packet=[]
-    #2,3
-    times=mtacalls.totalstationtimes(station)
-    while len(packet)<5:
-        for time in times:
-            if time[1]>2:
-                packet.append(time)
-    print(packet)
-    return packet
 
 
 
@@ -95,7 +85,7 @@ class GraphicsTest(SampleBase):
                         graphics.DrawText(canvas, font, 53, traincharspacing, color, str(train[1]))
                         traincharspacing+=8
                         b+=1
-            if c<3:
+            if c<(len(self.packet)):
                 print("sleeping")
                 time.sleep(10)
             else:
@@ -121,10 +111,9 @@ class GraphicsTest(SampleBase):
 # Main function
 while True:
     if __name__ == "__main__":
-        packet1=cycler(mtacalls, "232")
-        packet2=cycler(mtacalls, "A41")
-        packet3=cycler(mtacalls, "423")
-        packet=[packet1, packet2, packet3]
+        packet=mtacalls.totalstationtimes(["232", "A41", "423"])
+        
+        
         graphics_test = GraphicsTest(packet)
         #packet=cycler(mtacalls, "423")
 #        time.sleep(14)

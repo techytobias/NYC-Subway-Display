@@ -64,6 +64,7 @@
 - Use stops.csv to find the code for your desired station(s). Use only the first three letters.
     - e.g, 232 for Borough Hall, or A41 for Jay St-Metrotech.
     - Note that the station names for some stations in stops.csv have been shortened to fit better on the display.
+    - Ensure to change the data links on line 10 of mtacalls.py if your station is not on the 1,2,3,4,5,6,A,B,C,D,E,F,M
     
     
 
