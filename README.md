@@ -33,7 +33,7 @@
 #### Installing Python dependencies
 - In your SSH window, change directory to our main directory
     - cd /home/pi/rpi-rgb-led-matrix/bindings/python/samples/
-- Run packageinst.sh (You may need to make the file executable using the )
+- Run packageinst.sh (You may need to make the file executable using the command below)
     - sudo chmod +x packageinst.sh
     - sudo ./packageinst.sh
 - Check your work. You should see lots of new folders in the /home/pi/rpi-rgb-led-matrix/bindings/python/ directory.
