@@ -12,7 +12,7 @@
 - Adafruit RGB Matrix driver. I used [this one with the RTC](https://www.adafruit.com/product/2345), but you should be able to use the regular one
 - Adequate power for the display and Pi. [This adapter](https://www.adafruit.com/product/1466) should work great.
     - It's worth noting that my display is configured with 2A to the hat and 500mA to the Pi over USB. It works using lower brightness, but there is some flicker.
--Appropriate peripherals (Display, keyboard, mouse, etc) or SSH enabled by default.
+- Appropriate peripherals (Display, keyboard, mouse, etc) or SSH enabled by default.
 
 ## Before You Begin This Guide
 - Install Raspbian (No desktop environment needed)
