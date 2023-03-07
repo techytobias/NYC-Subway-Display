@@ -7,4 +7,4 @@ sudo pip3 install --upgrade gtfs-realtime-bindings -t /home/pi/rpi-rgb-led-matri
 sudo pip3 install python-dotenv -t /home/pi/rpi-rgb-led-matrix/bindings/python
 sudo pip3 install protobuf3-to-dict -t /home/pi/rpi-rgb-led-matrix/bindings/python
 sudo pip3 install --user gtfs-realtime-bindings -t /home/pi/rpi-rgb-led-matrix/bindings/python
-
+sudo pip3 install --upgrade gtfs-realtime-bindings
