@@ -16,6 +16,9 @@
 
 ## Before You Begin This Guide
 - Install Raspbian (No desktop environment needed)
+- Keeping the default user "pi" will work best, as that is what's configured in packageinst.sh 
+    - You may still change the default password
+    - If are advanced and you wish th use a different username, modify packageinst.sh for the new paths. 
 - Enable SSH
 - Get an MTA API key [here](https://api.mta.info).
 - Install PIP and Python on the Raspberry Pi (For retrieving packages)
