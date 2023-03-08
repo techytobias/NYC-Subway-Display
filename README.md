@@ -3,7 +3,7 @@
 #### Capabilities
 - Display times for arriving trains at any NYC subway station
 - Rotate through time displays for multiple stations
-- [Image of display](https://github.com/techytobias/NYC-Subway-Display/blob/main/V2Display.JPG)
+- [Image of display](https://github.com/techytobias/NYC-Subway-Display/blob/main/V1Display.JPG)
 - [Video of display](https://github.com/techytobias/NYC-Subway-Display/blob/main/V2DisplayVideo.MOV)
 - [Disruptions Screen](https://github.com/techytobias/NYC-Subway-Display/blob/main/V2NewDisruptionsScreenExample.JPG)
 ## Materials
