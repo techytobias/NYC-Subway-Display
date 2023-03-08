@@ -23,7 +23,7 @@
     - If are advanced and you wish th use a different username, modify packageinst.sh for the new paths. 
 - Enable SSH
 - Get an MTA API key [here](https://api.mta.info).
-- Install PIP and Python on the Raspberry Pi (For retrieving packages)
+- Install Python 3 (likely installed by default) and PIP (you likely will need to install) on the Raspberry Pi (For retrieving packages)
 - Follow [this Adafruit guide](https://learn.adafruit.com/adafruit-rgb-matrix-plus-real-time-clock-hat-for-raspberry-pi/driving-matrices) to get the examples running on your display.
     - You can pick between quality and convenience, both work for the purposes of this guide.
     - Ensure that you are able to run example 0 (the rotating cube) before continuing.
