@@ -20,6 +20,6 @@ fi
 sleep 30
 # This delay is to allow the pi to connect to wifi before the program starts. If using ethernet, you can reduce this to sleep 10
 cd /home/pi/rpi-rgb-led-matrix/bindings/python/samples
-sudo ./graphics4.py --led-rows=32 --led-cols=64 --led-slowdown-gpio=2 -b=50 &
+sudo ./rundisplay.py --led-rows=32 --led-cols=64 --led-slowdown-gpio=2 -b=50 &
 cd /
 exit 0
