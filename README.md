@@ -71,6 +71,7 @@
     - Note that the station names for some stations in stops.csv have been shortened to fit better on the display.
     - Ensure to change the data links on line 10 of mtacalls.py if your station is not on the 1,2,3,4,5,6,A,B,C,D,E,F,M
     - You may also need to edit the c value in lines 140 and 142 of rundisplay.py to reflect the number of stations if you are not using 3. 
+    - Modify the font - I like the font spleen. Change on line 56 of rundisplay.py
 - Edit /etc/rc.local to make the display start on boot and run continuously
     - See example rc.local file
     - I also recommend creating a cron job that reboots the pi automatically every day. This will help with stability and uptime.
