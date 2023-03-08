@@ -3,8 +3,9 @@
 #### Capabilities
 - Display times for arriving trains at any NYC subway station
 - Rotate through time displays for multiple stations
-- [Image of display](https://github.com/techytobias/NYC-Subway-Display/blob/main/Display.JPG)
-- [Video of display](https://github.com/techytobias/NYC-Subway-Display/blob/main/DisplayVideo.MOV)
+- [Image of display](https://github.com/techytobias/NYC-Subway-Display/blob/main/V2Display.JPG)
+- [Video of display](https://github.com/techytobias/NYC-Subway-Display/blob/main/V2DisplayVideo.MOV)
+- [Disruptions Screen](https://github.com/techytobias/NYC-Subway-Display/blob/main/V2NewDisruptionsScreenExample.JPG)
 ## Materials
 - Raspberry Pi (Pi 3 Model B or later recommended) with internet access over ethernet or WiFi
     - Do not overclock it (can cause screen issues)
