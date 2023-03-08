@@ -76,7 +76,3 @@
     - See example rc.local file
     - I also recommend creating a cron job that reboots the pi automatically every day. This will help with stability and uptime.
     
-    
-
-
-
