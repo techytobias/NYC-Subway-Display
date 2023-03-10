@@ -48,7 +48,7 @@ def station_time_lookup(train_data, station):
                         
                         if unique_time != None:
                             mintoarrival=mintoarrival=int(((unique_time - int(time.time())) / 60))
-                            if mintoarrival > 2:
+                            if mintoarrival > 2: #only displays trains 3 or more mins away
                                 ctimes.append([trainletter, mintoarrival, stop])
             except:
                 pass
@@ -93,7 +93,7 @@ def procservicedata():
     mainlist=getservicedata()[:10]
     mainlist2=[]
     for element in mainlist:
-        if element["id"][4]=="a":
+        if element["id"][4]=="a": #seperates active alerts from planned service changes
             mainlist2.append(element["alert"]["informed_entity"])
 
     for element4 in mainlist2:

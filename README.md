@@ -20,7 +20,7 @@
 - Install Raspbian (No desktop environment needed)
 - Keeping the default user "pi" will work best, as that is what's configured in packageinst.sh 
     - You may still change the default password
-    - If are advanced and you wish th use a different username, modify packageinst.sh for the new paths. 
+    - If are advanced and you wish to use a different username, modify packageinst.sh for the new paths. 
 - Enable SSH
 - Get an MTA API key [here](https://api.mta.info).
 - Install Python 3 (likely installed by default) and PIP (you likely will need to install) on the Raspberry Pi (For retrieving packages)
@@ -34,7 +34,7 @@
 - At this point, I'm assuming that you have the rotating cube demo file working. Your file structure should look like /home/pi/rpi-rgb-led-matrix/bindings/python/samples/
 - We will be keeping this file structure during this guide for the sake of simplicity.
 #### Transferring Files
-- Move the files rundisplay.py , mtacalls2.py (be sure to add your API key) , stops.csv , and packageinst.sh to /home/pi/rpi-rgb-led-matrix/bindings/python/samples/
+- Move the files rundisplay.py , mtacalls2.py (be sure to add your API key in the two places) , stops.csv , and packageinst.sh to /home/pi/rpi-rgb-led-matrix/bindings/python/samples/
     - Using FileZilla over SFTP is the reccommended way to do this.
 #### Installing Python dependencies
 - In your SSH window, change directory to our main directory
@@ -72,8 +72,9 @@
     - Note that the station names for some stations in stops.csv have been shortened to fit better on the display.
     - Ensure to change the data links on line 10 of mtacalls.py if your station is not on the 1,2,3,4,5,6,A,B,C,D,E,F,M
     - You may also need to edit the c value in lines 140 and 142 of rundisplay.py to reflect the number of stations if you are not using 3. 
-    - Modify the font - I like the font spleen. Change on line 56 of rundisplay.py
+- Modify the time filter for how long it takes you to get to your station (change mintoarrival on line 51 of mtacalls2.py)
+- Modify the font - I like the font spleen. Change on line 56 of rundisplay.py
 - Edit /etc/rc.local to make the display start on boot and run continuously
     - See example rc.local file
-    - I also recommend creating a cron job that reboots the pi automatically every day. This will help with stability and uptime.
+    - I also recommend creating a cron job that reboots the pi automatically every day. This will help with stability.
     
